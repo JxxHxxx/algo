@@ -32,7 +32,15 @@ public class INF0405 {
             }
         }
 
-        Integer result = results.stream().toList().get(target - 1);
-        System.out.println(result);
+        int cnt = 1;
+        int answer = -1;
+        for (Integer result : results) {
+            if (cnt == target) {
+                answer = result;
+                break;
+            }
+            cnt++;
+        }
+        System.out.println(answer);
     }
 }
